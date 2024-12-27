@@ -17,7 +17,11 @@ public class Patterns {
             System.out.println("\t7. Inverted Half Pyramid with Numbers");
             System.out.println("\t8. Floyd's Triangle");
             System.out.println("\t9. 0-1 Triangle");
-            System.out.println("\t10. Don't want");
+            System.out.println("\t10. Solid Rhombus");
+            System.out.println("\t11. Numbe Pyramid");
+            System.out.println("\t12. Palindromic Number Pyramid");
+
+            System.out.println("\t13. Don't want");
 
             System.out.print("\nEnter the Number: ");
             number = sc.nextInt();
@@ -35,6 +39,7 @@ public class Patterns {
                         }
                         System.out.println("");
                     }
+
                     break;
                 case 2:
                     System.out.print("How many Rows you want: ");
@@ -49,6 +54,7 @@ public class Patterns {
                                 System.out.print(" ");
                             }
                         }
+
                         System.out.println();
                     }
                     break;
@@ -59,6 +65,7 @@ public class Patterns {
                         for (int j = 1; j <= i; j++) {
                             System.out.print("*");
                         }
+
                         System.out.println();
                     }
                     break;
@@ -69,6 +76,7 @@ public class Patterns {
                         for (int j = 1; j <= i; j++) {
                             System.out.print("*");
                         }
+
                         System.out.println();
                     }
                     break;
@@ -82,6 +90,7 @@ public class Patterns {
                         for(int k  = 1; k <= i; k++) {
                             System.out.print("*");
                         }
+
                         System.out.println();
                     }
                     break;
@@ -92,6 +101,7 @@ public class Patterns {
                         for (int j = 1; j <= i; j++) {
                             System.out.print(j+" ");
                         }
+
                         System.out.println();
                     }
                     break;
@@ -102,6 +112,7 @@ public class Patterns {
                         for (int j = 1; j <= i; j++) {
                             System.out.print(j+" ");
                         }
+
                         System.out.println();
                     }
                     break;
@@ -114,6 +125,7 @@ public class Patterns {
                             System.out.print(num+" ");
                             num++;
                         }
+
                         System.out.println();
                     }
                     break;
@@ -122,22 +134,67 @@ public class Patterns {
                     row = sc.nextInt();
                     for (int i = 1; i <= row; i++) {
                         for (int j = 1; j <= i; j++) {
-                            if((i+j)%2==0){
-                                System.out.print("1 ");
-                            }else{
-                                System.out.print("0 ");
-                            }
+                            System.out.print("* ");
                         }
+
                         System.out.println();
                     }
                     break;
                 case 10:
+                    System.out.print("How many Rows you want: ");
+                    row = sc.nextInt();
+                    for (int i = 1; i <= row; i++) {
+                        for (int j = 1; j <= row-i; j++) {
+                            System.out.print(" ");
+                        }
+
+                        for(int j = 1; j <= row; j++) {
+                            System.out.print("*");
+                        }
+
+                        System.out.println();
+                    }
+                    break;
+                case 11:
+                    System.out.print("How many Rows you want: ");
+                    row = sc.nextInt();
+                    for (int i = 1; i <= row; i++) {
+                        for (int j = 1; j <= row-i; j++) {
+                            System.out.print(" ");
+                        }
+
+                        for(int j = 1; j <= i; j++) {
+                            System.out.print(i + " ");
+                        }
+                        System.out.println();
+                    }
+                    break;
+                case 12:
+                    System.out.print("How many Rows you want: ");
+                    row = sc.nextInt();
+                    for (int i = 1; i <= row; i++) {
+                        for (int j = 1; j <= row-i; j++) {
+                            System.out.print(" ");
+                        }
+
+                        for(int j = i; j >= 1; j--) {
+                            System.out.print(j);
+                        }
+
+                        for(int j = 2; j <= i; j++) {
+                            System.out.print(j);
+                        }
+
+                        System.out.println();
+                    }
+                    break;
+                case 13:
                     System.out.println("OK!");
                     break;
                 default:
                     System.out.println("Invalid Number");
                     break;
             }
-        } while (number != 10);
+        } while (number != 13);
     }
 }
