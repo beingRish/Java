@@ -20,8 +20,10 @@ public class Patterns {
             System.out.println("\t10. Solid Rhombus");
             System.out.println("\t11. Numbe Pyramid");
             System.out.println("\t12. Palindromic Number Pyramid");
+            System.out.println("\t13. Butterfly");
 
-            System.out.println("\t13. Don't want");
+
+            System.out.println("\t15. Don't want");
 
             System.out.print("\nEnter the Number: ");
             number = sc.nextInt();
@@ -189,12 +191,31 @@ public class Patterns {
                     }
                     break;
                 case 13:
+                    System.out.print("How many Rows you want: ");
+                    row = sc.nextInt();
+                    for (int i = 1; i <= row; i++) {
+                        for (int j = 1; j <= row-i; j++) {
+                            System.out.print(" ");
+                        }
+
+                        for(int j = i; j >= 1; j--) {
+                            System.out.print(j);
+                        }
+
+                        for(int j = 2; j <= i; j++) {
+                            System.out.print(j);
+                        }
+
+                        System.out.println();
+                    }
+                    break;
+                case 15:
                     System.out.println("OK!");
                     break;
                 default:
                     System.out.println("Invalid Number");
                     break;
             }
-        } while (number != 13);
+        } while (number != 15);
     }
 }
