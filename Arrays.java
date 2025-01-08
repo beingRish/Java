@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class Array {
+public class Arrays {
 
     // Take an array as input from the user.
     // Search for a given number x and the index at which it occurs.
